@@ -91,7 +91,7 @@ main()
   # status bar
   tmux set-option -g status-style "bg=${gray},fg=${white}"
 
-  tmux set-option -g status-left "#[bg=${green},fg=${dark_gray}]#{?client_prefix,#[bg=${yellow}],} ${left_icon}"
+  tmux set-option -g status-left "#[bg=${green},fg=${dark_gray}]#{#[bg=${yellow}],} ${left_icon}"
 
   tmux set-window-option -g window-status-current-style "#[fg=${white},bg=${dark_purple}]"
   tmux set-window-option -g window-status-current-format "→ #I:#W ←"
