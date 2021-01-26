@@ -118,10 +118,11 @@ main()
   # pane border styling
   if $show_border_contrast; then
     tmux set-option -g pane-active-border-style "fg=${light_purple}"
+	tmux set-option -g pane-border-style "fg=${light_purple}"
   else
     tmux set-option -g pane-active-border-style "fg=${dark_purple}"
+	tmux set-option -g pane-border-style "fg=${dark_purple}"
   fi
-  tmux set-option -g pane-border-style "fg=${gray}"
 
   # message styling
   tmux set-option -g message-style "bg=${gray},fg=${white}"
