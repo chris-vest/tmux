@@ -190,8 +190,6 @@ main()
   else
     tmux set-option -g status-left "#[bg=${green},fg=${dark_gray}]#{?client_prefix,#[bg=${yellow}],} ${left_icon}"
 
-    tmux set-option -g  status-right ""
-
       if $show_battery; then # battery
         tmux set-option -g  status-right "#[fg=${dark_gray},bg=${pink}] #($current_dir/battery.sh) "
       fi
@@ -227,7 +225,7 @@ main()
         fi
       fi
 
-      tmux set-window-option -g window-status-current-format "#[fg=${white},bg=${dark_purple}] #I #W${current_flags} "
+      tmux set-window-option -g window-status-current-format "#[fg=${white},bg=${dark_purple}] → #I:#W ← ${current_flags} "
 
   fi
 
