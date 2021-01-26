@@ -89,25 +89,26 @@ main()
 	  tmux set-option -g pane-border-style "fg=${dark_purple}"
   fi
 
-  # message styling
-  tmux set-option -g message-style "bg=${gray},fg=${white}"
+  # mode style
+  tmux set-option -g mode-style "fg=$color_red,bg=$color_orange"
 
-  # status bar
-  tmux set-option -g status-style "bg=${bgdark},fg=${white}"
+  # command line style; for typing tmux commands
+  tmux set-option -g message-style "fg=$color_main,bg=$color_purple"
+
+  # status line style
+  tmux set-option -g status-style "fg=$gray,bg=$bgdark"
 
   tmux set-option -g status-left "#[bg=${green},fg=${dark_gray}]#{#[bg=${yellow}],} ${left_icon} "
 
-  tmux set-window-option -g window-status-current-style "#[fg=${white},bg=${dark_purple}]"
+  # "tabs"
+  tmux set-window-option -g window-status-current-style "fg=${dark_gray},bg=${cyan}"
   tmux set-window-option -g window-status-current-format "→ #I:#W ←"
-
-  tmux set-window-option -g window-status-style "fg=${gray},bg=${dark_purple}"
+  tmux set-window-option -g window-status-style "fg=${cyan},bg=${dark_purple}"
   tmux set-window-option -g window-status-format " #I:#W "
   tmux set-window-option -g window-status-activity-style "bold"
   tmux set-window-option -g window-status-bell-style "bold"
 
   #set inactive/active window styles
-  tmux set-option -g window-style fg=colour247,bg=colour236
-  tmux set-option -g window-active-style fg=colour250,bg=colour237
   tmux set-option -g window-style "fg=$white_shade_4,bg=$bg"
   tmux set-option -g window-active-style "fg=$white,bg=$bglight"
 
