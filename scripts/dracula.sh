@@ -20,10 +20,8 @@ main()
 
   # set configuration option variables
   show_flags=$(get_tmux_option "@dracula-show-flags" false)
-  show_left_icon=$(get_tmux_option "@dracula-show-left-icon" smiley)
+  show_left_icon=$(get_tmux_option "@dracula-show-left-icon" session)
   show_left_icon_padding=$(get_tmux_option "@dracula-left-icon-padding" 1)
-  show_left_sep=$(get_tmux_option "@dracula-show-left-sep" )
-  show_right_sep=$(get_tmux_option "@dracula-show-right-sep" )
   show_border_contrast=$(get_tmux_option "@dracula-border-contrast" false)
   show_refresh=$(get_tmux_option "@dracula-refresh-rate" 5)
 
@@ -98,10 +96,10 @@ main()
   # status line style
   tmux set-option -g status-style "fg=$gray,bg=$bgdark"
 
-  tmux set-option -g status-left "#[bg=${green},fg=${dark_gray}]#{#[bg=${yellow}],} ${left_icon} "
+  tmux set-option -g status-left "#[bg=${dark_purple},fg=${cyan}]#{?client_prefix,#[bg=${orange}],} ${left_icon}"
 
   # "tabs"
-  tmux set-window-option -g window-status-current-style "fg=${dark_gray},bg=${cyan}"
+  tmux set-window-option -g window-status-current-style "fg=${dark_purple},bg=${cyan}"
   tmux set-window-option -g window-status-current-format "→ #I:#W ←"
   tmux set-window-option -g window-status-style "fg=${cyan},bg=${dark_purple}"
   tmux set-window-option -g window-status-format " #I:#W "
