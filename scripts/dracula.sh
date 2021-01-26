@@ -225,11 +225,13 @@ main()
         fi
       fi
 
-      tmux set-window-option -g window-status-current-format "#[fg=${white},bg=${dark_purple}] → #I:#W ← ${current_flags} "
+	  tmux set-window-option -g window-status-current-style "#[fg=${white},bg=${dark_purple}]"
+      tmux set-window-option -g window-status-current-format "→ #I:#W ←"
 
   fi
 
-  tmux set-window-option -g window-status-format "#[fg=${white}]#[bg=${gray}] #I #W${flags}"
+  tmux set-window-option -g window-status-style "fg=${grey},bg=${dark_purple}"
+  tmux set-window-option -g window-status-format " #I:#W "
   tmux set-window-option -g window-status-activity-style "bold"
   tmux set-window-option -g window-status-bell-style "bold"
 }
