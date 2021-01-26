@@ -30,6 +30,7 @@ main()
   # Dracula Color Pallette
   bglight='#343746'
   bg='#282A36'
+  bgdark="#21222C"
   white='#f8f8f2'
   white_shade_4='#949491'
   gray='#44475a'
@@ -92,7 +93,7 @@ main()
   tmux set-option -g message-style "bg=${gray},fg=${white}"
 
   # status bar
-  tmux set-option -g status-style "bg=${gray},fg=${white}"
+  tmux set-option -g status-style "bg=${bgdark},fg=${white}"
 
   tmux set-option -g status-left "#[bg=${green},fg=${dark_gray}]#{#[bg=${yellow}],} ${left_icon} "
 
