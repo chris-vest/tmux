@@ -231,7 +231,7 @@ main()
 
   fi
 
-  tmux set-window-option -g window-status-style "fg=${grey},bg=${dark_purple}"
+  tmux set-window-option -g window-status-style "fg=${gray},bg=${dark_purple}"
   tmux set-window-option -g window-status-format " #I:#W "
   tmux set-window-option -g window-status-activity-style "bold"
   tmux set-window-option -g window-status-bell-style "bold"
