@@ -94,9 +94,9 @@ main()
   tmux set-option -g message-style "fg=$color_main,bg=$color_purple"
 
   # status line style
-  tmux set-option -g status-style "fg=$gray,bg=$bgdark"
+  tmux set-option -g status-style "fg=$gray,bg=$dark_purple"
 
-  tmux set-option -g status-left "#[bg=${light_purple},fg=${cyan}]#{?client_prefix,#[bg=${orange}],}${left_icon}"
+  tmux set-option -g status-left "#[bg=${light_purple},fg=${cyan}]#{?client_prefix,#[bg=${orange}],} ${left_icon} "
 
   # "tabs"
   tmux set-window-option -g window-status-current-style "fg=${dark_purple},bg=${cyan}"
